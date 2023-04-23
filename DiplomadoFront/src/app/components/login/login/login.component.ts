@@ -14,8 +14,9 @@ export class LoginComponent {
     password: ['', Validators.required]
   });
 
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder, private router: Router) { }
 
   onSubmit() {
+    this.router.navigate(['/modulos', 'consultas']);
   }
 }

@@ -1,0 +1,23 @@
+table {
+    width: 100%;
+    margin-top: 30px;
+
+    th.mat-header-cell,
+    td.mat-cell {
+        padding: 10px;
+        text-align: center;
+    }
+
+    th.mat-header-cell {
+        font-weight: bold;
+        background-color: #eee;
+    }
+
+    td.mat-cell {
+        font-weight: normal;
+    }
+
+    button.mat-icon-button {
+        margin-right: 5px;
+    }
+}

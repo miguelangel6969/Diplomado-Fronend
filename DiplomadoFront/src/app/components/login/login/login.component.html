@@ -16,7 +16,7 @@
                 <mat-error *ngIf="loginForm.get('password')?.invalid">Ingrese una contraseña válida</mat-error>
             </mat-form-field>
             <div class="register">
-                <button [routerLink]="['/registro']" class="button_register">¿No tienes cuenta?
+                <button [routerLink]="['login/registro']" class="button_register">¿No tienes cuenta?
                     Registrate.</button>
             </div>
             <button mat-raised-button color="primary" [disabled]="!loginForm.valid">Iniciar sesión</button>
