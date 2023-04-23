@@ -14,6 +14,11 @@ const routes: Routes = [
     loadChildren: () => import('./consultas/consultas.module').then(m => m.ConsultasModule)
   },
   {
+    path: 'transacciones',
+    component: ModulosComponent,
+    loadChildren: () => import('./transacciones/transacciones.module').then(m => m.TransaccionesModule)
+  },
+  {
     path: '**',
     redirectTo: 'consultas'
   }

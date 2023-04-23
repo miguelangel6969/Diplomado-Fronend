@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { ModulesRoutingModule } from './modules-routing.module';
 import { ConsultaComponent } from './consultas/consulta/consulta.component';
-import { GenerarTransaccionComponent } from './generar-transaccion/generar-transaccion.component';
+import { GenerarTransaccionComponent } from './transacciones/generar-transaccion/generar-transaccion.component';
 import { ConsultaSaldoComponent } from './consultas/consulta-saldo/consulta-saldo.component';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';

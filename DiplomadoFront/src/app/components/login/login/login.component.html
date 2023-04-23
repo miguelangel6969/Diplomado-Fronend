@@ -1,6 +1,6 @@
 <div class="container">
     <div class="form-group">
-        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <form [formGroup]="loginForm">
             <div class="title">
                 <p>BIENVENIDO</p><br>
             </div>
@@ -16,10 +16,11 @@
                 <mat-error *ngIf="loginForm.get('password')?.invalid">Ingrese una contraseña válida</mat-error>
             </mat-form-field>
             <div class="register">
-                <button [routerLink]="['login/registro']" class="button_register">¿No tienes cuenta?
+                <button [routerLink]="['/login/registro']" class="button_register">¿No tienes cuenta?
                     Registrate.</button>
             </div>
-            <button mat-raised-button color="primary" [disabled]="!loginForm.valid">Iniciar sesión</button>
+            <button (click)="onSubmit()" mat-raised-button color="primary" [disabled]="!loginForm.valid">Iniciar
+                sesión</button>
         </form>
     </div>
 </div>

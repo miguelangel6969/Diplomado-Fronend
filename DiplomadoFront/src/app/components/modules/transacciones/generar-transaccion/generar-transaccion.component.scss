@@ -9,13 +9,8 @@
     padding: 20px;
 }
 
-.generar {
-    background-color: green;
-    color: white;
-    margin-right: 10px;
-}
-
-.consultar {
-    background-color: blue;
-    color: white;
+.field-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
 }

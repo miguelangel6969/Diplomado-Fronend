@@ -11,5 +11,5 @@ export class ConsultaSaldoComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  saldo = 1000;
 }
