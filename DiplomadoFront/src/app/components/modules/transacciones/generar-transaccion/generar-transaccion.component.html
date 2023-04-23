@@ -1,0 +1,32 @@
+<div class="container">
+    <form [formGroup]="transactionForm" (ngSubmit)="onSubmit()" fxLayout="column" fxLayoutGap="10px">
+        <div class="field-container">
+            <mat-form-field appearance="fill">
+                <mat-label>Monto de transacción:</mat-label>
+                <input matInput type="number" formControlName="amount" />
+                <mat-error
+                    *ngIf="transactionForm.controls.amount.invalid && (transactionForm.controls.amount.dirty || transactionForm.controls.amount.touched)">
+                    <div *ngIf="transactionForm.controls.amount.errors?.required">El monto es obligatorio</div>
+                </mat-error>
+            </mat-form-field>
+        </div>
+
+        <div class="field-container">
+            <mat-form-field appearance="fill">
+                <mat-label>Usuario:</mat-label>
+                <mat-select formControlName="user" required>
+                    <mat-option *ngFor="let user of users" [value]="user.id">{{ user.name }}</mat-option>
+                </mat-select>
+                <mat-error
+                    *ngIf="transactionForm.controls.user.invalid && (transactionForm.controls.user.dirty || transactionForm.controls.user.touched)">
+                    <div *ngIf="transactionForm.controls.user.errors?.required">Debe seleccionar un usuario</div>
+                </mat-error>
+            </mat-form-field>
+        </div>
+
+        <div fxLayout="row" fxLayoutAlign="end center" fxLayoutGap="10px">
+            <button mat-button [routerLink]="['/modulos','consultas']" color="warn" type="button">Cancelar</button>
+            <button mat-raised-button color="primary" type="submit">Aceptar</button>
+        </div>
+    </form>
+</div>

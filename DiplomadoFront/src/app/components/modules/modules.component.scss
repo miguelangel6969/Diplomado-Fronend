@@ -1,0 +1,102 @@
+#my-icon {
+    font-size: 40px;
+}
+
+#my-icon-2 {
+    font-size: 20px;
+    text-align: center;
+    vertical-align: bottom;
+}
+
+#my-text-menu {
+    font-size: 15px;
+    vertical-align: middle;
+
+}
+
+mat-grid-tile {
+    background: lightblue;
+}
+
+mat-toolbar {
+    background: #004a9f;
+    color: white;
+}
+
+
+
+mat-sidenav {
+    margin-top: 15px;
+    margin: 5px;
+    padding-top: 16px;
+    width: 230px;
+    background: #002b5c;
+    color: white;
+    border-radius: 10px;
+    text-align: left;
+}
+
+.content {
+    height: 98%;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-left: 25px;
+    margin-bottom: 15px;
+    margin-right: 10px;
+
+    overflow: auto;
+    display: flex;
+}
+
+mat-sidenav-container {
+    height: calc(100vh - 65px);
+}
+
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+.menu-button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 1rem;
+
+    mat-icon {
+        margin-right: 8px;
+    }
+
+}
+
+mat-icon {
+    margin-right: 8px;
+}
+
+.avatar {
+    margin-top: 16px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.imgNombre {
+    width: 13%;
+}
+
+.name {
+    margin-top: 8px;
+    font-weight: normal;
+}
+
+.designation {
+    margin-top: 2px;
+    font-size: 0.7rem;
+    color: lightgrey;
+}
+
+mat-divider {
+    margin-top: 16px;
+    margin-bottom: 16px;
+    background-color: rgba(255, 255, 255, 0.5);
+}

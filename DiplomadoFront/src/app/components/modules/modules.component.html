@@ -1,0 +1,40 @@
+<div style="width: 100%">
+    <mat-toolbar style="background-color:#273163;" class="mat-elevation-z8">
+        <button mat-button [matMenuTriggerFor]="belowMenu">Consultas</button>
+        <mat-menu #belowMenu="matMenu" yPosition="below">
+            <button mat-menu-item [routerLink]="['/modulos','consultas','consultarSaldo']">Consultar saldo </button>
+            <button mat-menu-item [routerLink]="['/modulos','consultas']">Consultar transacciones</button>
+        </mat-menu>
+
+        <button mat-button [matMenuTriggerFor]="belowMenu2">Transacción</button>
+        <mat-menu #belowMenu2="matMenu" yPosition="below">
+            <button [routerLink]="['/modulos','transacciones']" mat-menu-item>Generar transacción</button>
+        </mat-menu>
+        <span class="example-spacer"></span>
+        <div style="position: absolute;margin-left: 95%">
+            <button mat-icon-button [matMenuTriggerFor]="menu">
+                <mat-icon id="my-icon">drag_indicator</mat-icon>
+            </button>
+            <div>
+                <mat-menu #menu="matMenu">
+                    <button mat-menu-item>
+                        <mat-icon>account_circle</mat-icon>
+                        <span>Miguel Hernandez</span>
+                    </button>
+                    <button [routerLink]="['/modulos','consultas']" mat-menu-item>
+                        <mat-icon>home</mat-icon>
+                        <span>Inicio</span>
+                    </button>
+                    <button [routerLink]="['/login', 'login']" mat-menu-item>
+                        <mat-icon>power_settings_new</mat-icon>
+                        <span>Cerrar sesión</span>
+                    </button>
+                </mat-menu>
+            </div>
+
+        </div>
+    </mat-toolbar>
+</div>
+<div style="margin: 3%;">
+    <router-outlet></router-outlet>
+</div>
