@@ -12,12 +12,14 @@
             <mat-form-field>
                 <mat-label>Nombre</mat-label>
                 <input matInput formControlName="nombre">
-                <mat-error *ngIf="loginForm.get('email')?.invalid">Ingrese un nombre válido</mat-error>
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Apellido</mat-label>
+                <input matInput formControlName="apellido">
             </mat-form-field>
             <mat-form-field>
                 <mat-label>Cedula</mat-label>
                 <input matInput formControlName="numDoc">
-                <mat-error *ngIf="loginForm.get('email')?.invalid">Ingrese un numero válido</mat-error>
             </mat-form-field>
             <mat-form-field>
                 <mat-label>Contraseña</mat-label>

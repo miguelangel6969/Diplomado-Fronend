@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ProductService } from 'src/app/core/service/data.service';
+import { AuthService } from 'src/app/core/service/auth.service';
 export interface ElementoTabla {
   id: number;
   nombre: string;
@@ -21,10 +21,11 @@ export class ConsultaComponent implements OnInit {
     { id: 2, nombre: 'Cristina Rodriguez', ciudad: 'Medellín', tipoPersona: 'Natural' },
     { id: 3, nombre: 'Empresa SAS', ciudad: 'Cali', tipoPersona: 'Jurídica' },
   ];
-  constructor(private svProduc: ProductService) { }
+  constructor() { }
 
   ngOnInit(): void {
-    console.log(this.svProduc.getAllProductos())
+
+
   }
 
 }

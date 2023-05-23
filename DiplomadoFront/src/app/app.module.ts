@@ -15,11 +15,13 @@ import { CurrencyPipe } from '@angular/common';
 import { LoginModule } from './components/login/login.module';
 import { ModulesModule } from './components/modules/modules.module';
 import { MaterialModule } from './core/modules/material.module';
+import { LoadingDialogComponent } from './components/modals/loading-dialog/loading-dialog.component';
+import { TokenInterceptor } from './core/service/token.interceptor';
 
 @NgModule({
   declarations: [
     AppComponent,
-
+    LoadingDialogComponent,
   ],
   imports: [
     BrowserModule,
@@ -37,7 +39,12 @@ import { MaterialModule } from './core/modules/material.module';
     FormsModule,
     ReactiveFormsModule,
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: TokenInterceptor,
+      multi: true
+    },],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })

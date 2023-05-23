@@ -3,8 +3,11 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
-};
+  production: false,
+  //apiEndpoint: 'http://localhost:8080/sisec/v1/',
+  apiEndpoint: 'http://127.0.0.1:5000/',
+  ambiente: 'Local'
+}
 
 /*
  * For easier debugging in development mode, you can import the following file

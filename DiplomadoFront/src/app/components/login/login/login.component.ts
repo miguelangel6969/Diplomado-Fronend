@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { AuthService } from 'src/app/core/service/auth.service';
 
 
 @Component({
@@ -14,9 +15,18 @@ export class LoginComponent {
     password: ['', Validators.required]
   });
 
-  constructor(private fb: FormBuilder, private router: Router) { }
+  constructor(private svAuth: AuthService, private fb: FormBuilder, private router: Router) { }
+
+  get fc() {
+    return this.loginForm.controls
+  }
+  get fv() {
+    return this.loginForm.value;
+  }
 
   onSubmit() {
-    this.router.navigate(['/modulos', 'consultas']);
+    this.svAuth.login(this.fv.email, this.fv.password).subscribe(resp => {
+      this.router.navigate(['/modulos', 'consultas']);
+    })
   }
 }
