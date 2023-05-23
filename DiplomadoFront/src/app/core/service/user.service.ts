@@ -18,4 +18,7 @@ export class UserService {
     list(): Observable<any> {
         return this.http.get<any>(`${this.cs.base}usuarios/list`);
     }
+    user(): Observable<any> {
+        return this.http.get<any>(`${this.cs.base}usuario/data`);
+    }
 }

@@ -1,5 +1,7 @@
+import { DatePipe } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from 'src/app/core/service/auth.service';
+import { BlockService } from 'src/app/core/service/block.service';
 export interface ElementoTabla {
   id: number;
   nombre: string;
@@ -14,18 +16,16 @@ export interface ElementoTabla {
 
 
 export class ConsultaComponent implements OnInit {
-  columnas: string[] = ['id', 'nombre', 'ciudad', 'tipoPersona', 'acciones'];
+  columnas: string[] = ['fecha', 'monto', 'usuario'];
 
-  dataSource: ElementoTabla[] = [
-    { id: 1, nombre: 'Juan Perez', ciudad: 'Bogotá', tipoPersona: 'Natural' },
-    { id: 2, nombre: 'Cristina Rodriguez', ciudad: 'Medellín', tipoPersona: 'Natural' },
-    { id: 3, nombre: 'Empresa SAS', ciudad: 'Cali', tipoPersona: 'Jurídica' },
-  ];
-  constructor() { }
+  dataSource: ElementoTabla[] = [];
+  constructor(private svBlock: BlockService) { }
 
   ngOnInit(): void {
-
-
+    this.svBlock.historial().subscribe(resp => {
+      this.dataSource = resp
+      console.log(resp)
+    })
   }
 
 }

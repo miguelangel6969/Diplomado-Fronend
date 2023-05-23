@@ -16,4 +16,11 @@ export class BlockService {
     generarTransaccion(data: any): Observable<any> {
         return this.http.post<any>(`${this.cs.base}/transaccion`, data);
     }
+    saldo(): Observable<any> {
+        return this.http.get<any>(`${this.cs.base}/wallet/saldo`);
+    }
+
+    historial(): Observable<any> {
+        return this.http.get<any>(`${this.cs.base}transaccion/historial`);
+    }
 }

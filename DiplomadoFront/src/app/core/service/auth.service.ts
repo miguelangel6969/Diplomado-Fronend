@@ -19,7 +19,7 @@ export class AuthService {
                 if (resp.access_token) {
                     localStorage.clear();
                     localStorage.setItem('token', resp.access_token);
-                    console.log("=>>>>>", sessionStorage.getItem('token'))
+                    console.log("=>>>>>", localStorage.getItem('token'))
                     localStorage.setItem('refresToken', resp.refresh_token);
                     return resp;
                 }
