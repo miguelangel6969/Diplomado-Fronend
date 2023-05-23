@@ -15,11 +15,9 @@ export class AuthService {
         const body = { email: UserName, password: Password };
         return this.http.post(`${this.cs.base}auth`, body).pipe(
             map((resp: any) => {
-                console.log(resp);
                 if (resp.access_token) {
                     localStorage.clear();
                     localStorage.setItem('token', resp.access_token);
-                    console.log("=>>>>>", localStorage.getItem('token'))
                     localStorage.setItem('refresToken', resp.refresh_token);
                     return resp;
                 }
