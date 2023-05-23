@@ -1,5 +1,4 @@
 <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
-
     <!-- ID Column -->
     <ng-container matColumnDef="fecha">
         <th mat-header-cell *matHeaderCellDef> Fecha </th>
@@ -9,11 +8,13 @@
     <!-- Nombre Column -->
     <ng-container matColumnDef="monto">
         <th mat-header-cell *matHeaderCellDef> Monto </th>
-        <td mat-cell *matCellDef="let element"> {{element.monto}} </td>
+        <td mat-cell *matCellDef="let element" [ngStyle]="getStyle(element.positivo)">
+            {{getSigno(element.monto,element.positivo)}} </td>
     </ng-container>
+
     <ng-container matColumnDef="usuario">
         <th mat-header-cell *matHeaderCellDef> Usuario </th>
-        <td mat-cell *matCellDef="let element"> {{element.usuario}} </td>
+        <td mat-cell *matCellDef="let element">{{element.usuario}} </td>
     </ng-container>
 
     <tr mat-header-row *matHeaderRowDef="columnas"></tr>
