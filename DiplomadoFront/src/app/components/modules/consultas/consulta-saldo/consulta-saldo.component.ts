@@ -13,7 +13,6 @@ export class ConsultaSaldoComponent implements OnInit {
   saldo = 0;
   ngOnInit(): void {
     this.svBlock.saldo().subscribe(resp => {
-      console.log(resp)
       this.saldo = resp.saldo
     })
   }

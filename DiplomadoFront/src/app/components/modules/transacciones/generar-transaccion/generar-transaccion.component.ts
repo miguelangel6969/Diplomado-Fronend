@@ -30,7 +30,6 @@ export class GenerarTransaccionComponent implements OnInit {
   ngOnInit(): void {
     this.svUsuarios.list().subscribe(resp => {
       this.userlogin = localStorage.getItem('user')
-      console.log("compra", this.userlogin)
       this.users = resp.filter((user: usuarios) => user.cedula != this.userlogin)
     })
   }

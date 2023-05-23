@@ -34,7 +34,6 @@ export class ConsultaComponent implements OnInit {
   ngOnInit(): void {
     this.svBlock.historial().subscribe(resp => {
       this.dataSource = resp
-      console.log(resp)
     })
   }
 

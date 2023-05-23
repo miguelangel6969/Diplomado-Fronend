@@ -15,7 +15,6 @@ export class ModulosComponent implements OnInit {
   user = new usuarios()
   ngOnInit(): void {
     this.svUser.user().subscribe(resp => {
-      console.log(resp)
       localStorage.setItem('user', resp.cedula);
       this.user = resp
     })
