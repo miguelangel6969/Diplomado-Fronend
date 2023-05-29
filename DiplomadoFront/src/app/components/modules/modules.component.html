@@ -19,13 +19,13 @@
                 <mat-menu #menu="matMenu">
                     <button mat-menu-item>
                         <mat-icon>account_circle</mat-icon>
-                        <span>Miguel Hernandez</span>
+                        <span>{{this.user.nombres}} {{this.user.apellidos}} CC {{this.user.cedula}}</span>
                     </button>
                     <button [routerLink]="['/modulos','consultas']" mat-menu-item>
                         <mat-icon>home</mat-icon>
                         <span>Inicio</span>
                     </button>
-                    <button [routerLink]="['/login', 'login']" mat-menu-item>
+                    <button (click)="logout()" mat-menu-item>
                         <mat-icon>power_settings_new</mat-icon>
                         <span>Cerrar sesión</span>
                     </button>

@@ -1,40 +1,20 @@
 <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
-
     <!-- ID Column -->
-    <ng-container matColumnDef="id">
-        <th mat-header-cell *matHeaderCellDef> ID </th>
-        <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+    <ng-container matColumnDef="fecha">
+        <th mat-header-cell *matHeaderCellDef> Fecha </th>
+        <td mat-cell *matCellDef="let element"> {{element.fecha | date:'dd/MM/yyyy'}} </td>
     </ng-container>
 
     <!-- Nombre Column -->
-    <ng-container matColumnDef="nombre">
-        <th mat-header-cell *matHeaderCellDef> Nombre </th>
-        <td mat-cell *matCellDef="let element"> {{element.nombre}} </td>
+    <ng-container matColumnDef="monto">
+        <th mat-header-cell *matHeaderCellDef> Monto </th>
+        <td mat-cell *matCellDef="let element" [ngStyle]="getStyle(element.positivo)">
+            {{getSigno(element.monto,element.positivo)}} </td>
     </ng-container>
 
-    <!-- Ciudad Column -->
-    <ng-container matColumnDef="ciudad">
-        <th mat-header-cell *matHeaderCellDef> Ciudad </th>
-        <td mat-cell *matCellDef="let element"> {{element.ciudad}} </td>
-    </ng-container>
-
-    <!-- TipoPersona Column -->
-    <ng-container matColumnDef="tipoPersona">
-        <th mat-header-cell *matHeaderCellDef> Tipo Persona </th>
-        <td mat-cell *matCellDef="let element"> {{element.tipoPersona}} </td>
-    </ng-container>
-
-    <!-- Acciones Column -->
-    <ng-container matColumnDef="acciones">
-        <th mat-header-cell *matHeaderCellDef> Acciones </th>
-        <td mat-cell *matCellDef="let element">
-            <button mat-icon-button color="primary" aria-label="Editar">
-                <mat-icon>edit</mat-icon>
-            </button>
-            <button mat-icon-button color="warn" aria-label="Eliminar">
-                <mat-icon>delete</mat-icon>
-            </button>
-        </td>
+    <ng-container matColumnDef="usuario">
+        <th mat-header-cell *matHeaderCellDef> Usuario </th>
+        <td mat-cell *matCellDef="let element">{{element.usuario}} </td>
     </ng-container>
 
     <tr mat-header-row *matHeaderRowDef="columnas"></tr>

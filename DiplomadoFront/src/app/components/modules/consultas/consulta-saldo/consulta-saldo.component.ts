@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { BlockService } from 'src/app/core/service/block.service';
 
 @Component({
   selector: 'app-consulta-saldo',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ConsultaSaldoComponent implements OnInit {
 
-  constructor() { }
+  constructor(private svBlock: BlockService) { }
 
+  saldo = 0;
   ngOnInit(): void {
+    this.svBlock.saldo().subscribe(resp => {
+      this.saldo = resp.saldo
+    })
   }
-  saldo = 1000;
 }

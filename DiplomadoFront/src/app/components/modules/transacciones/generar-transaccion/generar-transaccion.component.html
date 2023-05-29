@@ -15,7 +15,8 @@
             <mat-form-field appearance="fill">
                 <mat-label>Usuario:</mat-label>
                 <mat-select formControlName="user" required>
-                    <mat-option *ngFor="let user of users" [value]="user.id">{{ user.name }}</mat-option>
+                    <mat-option *ngFor="let user of users" [value]="user">{{ user.nombres }}
+                        {{user.apellidos}}</mat-option>
                 </mat-select>
                 <mat-error
                     *ngIf="transactionForm.controls.user.invalid && (transactionForm.controls.user.dirty || transactionForm.controls.user.touched)">
