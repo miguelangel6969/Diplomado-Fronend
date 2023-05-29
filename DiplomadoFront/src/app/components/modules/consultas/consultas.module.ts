@@ -11,7 +11,6 @@ import { ConsultasRoutingModule } from './consultas-routing.module';
 import { ConsultaSaldoComponent } from './consulta-saldo/consulta-saldo.component';
 import { ConsultaComponent } from './consulta/consulta.component';
 import { MaterialModule } from 'src/app/core/modules/material.module';
-import { ValorColorDirective } from 'src/app/core/directive/color-value.directive';
 
 @NgModule({
     declarations: [

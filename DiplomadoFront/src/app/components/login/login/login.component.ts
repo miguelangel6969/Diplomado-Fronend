@@ -25,6 +25,8 @@ export class LoginComponent {
     return this.loginForm.value;
   }
 
+
+  //Metodo para iniciar sesion dentro de la aplicacion 
   onSubmit() {
     this.svAuth.login(this.fv.email, this.fv.password).subscribe(resp => {
       this.router.navigate(['/modulos', 'consultas']);

@@ -30,7 +30,7 @@ export class RegistroComponent implements OnInit {
   get fv() {
     return this.loginForm.value;
   }
-
+  //metodo para registrar un usuario dentro de la aplicacion 
   onSubmit() {
     let user = new usuario()
     user.nombres = this.fv.nombre

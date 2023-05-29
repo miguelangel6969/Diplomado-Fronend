@@ -6,17 +6,15 @@ import {
 import { Observable } from 'rxjs';
 
 import { finalize } from 'rxjs/internal/operators/finalize';
-import { LoadingService } from './loading.service';
 
 /** Pass untouched request through to the next request handler. */
 @Injectable()
 export class TokenInterceptor implements HttpInterceptor {
 
-    constructor(private loader: LoadingService) { }
+    constructor() { }
 
     intercept(req: HttpRequest<any>, next: HttpHandler):
         Observable<HttpEvent<any>> {
-        this.loader.show();
         let header = new HttpHeaders({
             'Content-Type': 'application/json;charset=UTF-8',
             'Access-Control-Allow-Origin': '*'

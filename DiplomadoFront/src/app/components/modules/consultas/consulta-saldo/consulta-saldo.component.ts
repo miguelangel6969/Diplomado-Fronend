@@ -11,6 +11,7 @@ export class ConsultaSaldoComponent implements OnInit {
   constructor(private svBlock: BlockService) { }
 
   saldo = 0;
+  //Consulta el saldo del usuario logeado
   ngOnInit(): void {
     this.svBlock.saldo().subscribe(resp => {
       this.saldo = resp.saldo
