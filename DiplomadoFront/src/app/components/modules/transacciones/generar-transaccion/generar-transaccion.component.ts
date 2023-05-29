@@ -27,6 +27,7 @@ export class GenerarTransaccionComponent implements OnInit {
     });
   }
 
+  //precarga los datos que se muestran en el select
   ngOnInit(): void {
     this.svUsuarios.list().subscribe(resp => {
       this.userlogin = localStorage.getItem('user')
@@ -41,6 +42,7 @@ export class GenerarTransaccionComponent implements OnInit {
     return this.transactionForm.value;
   }
 
+  //Genera la transaccion
   onSubmit() {
     if (this.transactionForm.valid) {
       let data = {

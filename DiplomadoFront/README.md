@@ -1,27 +1,42 @@
-# DiplomadoFront
+# Nombre del Proyecto
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.16.
+Block Chane
 
-## Development server
+Proyecto desarrollado para lograr desarrollar una aplicación monolítica la cual esta corresponde al Front end de la aplicación, con el objetivo de generar transacciones y poder ver los registros correspondientes.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## Requisitos Previos
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Asegúrate de tener instaladas las siguientes herramientas antes de comenzar:
 
-## Build
+- [Angular CLI](https://github.com/angular/angular-cli) version 12.2.16
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Configuración del Proyecto
 
-## Running unit tests
+Sigue estos pasos para configurar y ejecutar el proyecto localmente:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+1. Clona este repositorio: `https://github.com/miguelangel6969/Diplomado-Fronend.git`
+2. Navega hasta el directorio del proyecto: `cd DiplomadoFront`
+3. Instala las dependencias: `npm install`
+4. Ejecuta el proyecto: `ng serve`
+5. Abre tu navegador web y ve a `http://localhost:4200`
 
-## Running end-to-end tests
+## Estructura del Proyecto
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Describe brevemente la estructura de archivos y directorios del proyecto:
 
-## Further help
+- `/src`: Contiene el código fuente del proyecto.
+- `/src/app`: Contiene los componentes, servicios y otros archivos de Angular.
+- `/src/assets`: Contiene recursos estáticos como imágenes y archivos de estilo.
+- `/src/components`: Contiene los componentes visuales de la aplicación
+- `/src/core`: contiene la configuración y consumo de los servicios rest.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Contribución
+
+Si deseas contribuir a este proyecto, sigue estos pasos:
+
+1. Crea un fork del repositorio.
+2. Realiza tus cambios en una nueva rama (`git checkout -b feature/nueva-funcionalidad`).
+3. Realiza un commit de tus cambios (`git commit -am 'Añade nueva funcionalidad'`).
+4. Realiza un push a la rama (`git push origin feature/nueva-funcionalidad`).
+5. Abre una pull request en GitHub.

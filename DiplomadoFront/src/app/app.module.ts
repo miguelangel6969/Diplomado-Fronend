@@ -17,14 +17,12 @@ import { ModulesModule } from './components/modules/modules.module';
 import { MaterialModule } from './core/modules/material.module';
 import { LoadingDialogComponent } from './components/modals/loading-dialog/loading-dialog.component';
 import { TokenInterceptor } from './core/service/token.interceptor';
-import { ValorColorDirective } from './core/directive/color-value.directive';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     LoadingDialogComponent,
-    ValorColorDirective,
   ],
   imports: [
     BrowserModule,

@@ -20,17 +20,19 @@ export class ConsultaComponent implements OnInit {
 
   dataSource: ElementoTabla[] = [];
   constructor(private svBlock: BlockService) { }
-
+  //Asigna los estilos correspondientes al valor 
   getStyle(value: boolean): object {
     return {
       color: value ? 'green' : 'red'
     };
   }
+  //Asigna el signo correspondientes al valor 
   getSigno(valor: String, signo: boolean) {
     let valorSigno = ""
     signo ? valorSigno = "+ " + valor : valorSigno = "- " + valor
     return valorSigno
   }
+  //Consulta el historial del usuario logeado
   ngOnInit(): void {
     this.svBlock.historial().subscribe(resp => {
       this.dataSource = resp
