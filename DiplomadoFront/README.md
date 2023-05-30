@@ -1,6 +1,6 @@
 # Nombre del Proyecto
 
-Block Chane
+Block Chain
 
 Proyecto desarrollado para lograr desarrollar una aplicación monolítica la cual esta corresponde al Front end de la aplicación, con el objetivo de generar transacciones y poder ver los registros correspondientes.
 
