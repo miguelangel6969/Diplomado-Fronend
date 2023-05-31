@@ -44,5 +44,5 @@ Si deseas contribuir a este proyecto, sigue estos pasos:
 
 ## Documentacion 
 
-Para poder ver la documentación relacionada por favor dirigirse al siguiente repositorio
+Para poder ver la documentación relacionada por favor dirigirse al siguiente repositorio https://github.com/mninoquitian/Proyecto-Diplomado/tree/master/Documentacion
 
