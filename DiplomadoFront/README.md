@@ -40,3 +40,9 @@ Si deseas contribuir a este proyecto, sigue estos pasos:
 3. Realiza un commit de tus cambios (`git commit -am 'Añade nueva funcionalidad'`).
 4. Realiza un push a la rama (`git push origin feature/nueva-funcionalidad`).
 5. Abre una pull request en GitHub.
+
+
+## Documentacion 
+
+Para poder ver la documentación relacionada por favor dirigirse al siguiente repositorio
+
