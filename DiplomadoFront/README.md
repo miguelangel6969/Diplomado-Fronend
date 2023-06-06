@@ -1,6 +1,4 @@
-# Nombre del Proyecto
-
-Block Chain
+# Block Chain
 
 Proyecto desarrollado para lograr desarrollar una aplicación con arquitectura de microservicios. la cual esta corresponde al Front end de la aplicación, con el objetivo de generar transacciones y poder ver los registros correspondientes.
 
