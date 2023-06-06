@@ -1,2 +1,0 @@
-# Diplomado-Fronend
-Diplomado-Fronend
